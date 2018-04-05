@@ -32,6 +32,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BankAccount">
+      <HintPath>..\..\HW8 Downloads\BankAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Circle">
+      <HintPath>..\..\HW8 Downloads\Circle.dll</HintPath>
+    </Reference>
+    <Reference Include="Line">
+      <HintPath>..\..\HW8 Downloads\Line.dll</HintPath>
+    </Reference>
+    <Reference Include="Shape">
+      <HintPath>..\..\HW8 Downloads\Shape.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -42,6 +54,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BankAccount.cs" />
+    <Compile Include="Name.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
