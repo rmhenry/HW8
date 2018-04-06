@@ -33,5 +33,10 @@ public class BankAccount {
   public double GetBalance() {                                                         
     return balance;
   }
+
+  public void ReadAccount()
+    {
+
+    } 
 }
 

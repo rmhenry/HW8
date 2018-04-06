@@ -57,6 +57,22 @@ namespace HW8
 
         public static void Ex10_9Test()
         {
+            SavingsAccount savings = new SavingsAccount(100.00, 3.5);
+            SavingsAccount s = (SavingsAccount)savings.ReadAccount();
+            CheckingAccount checking = new CheckingAccount(1000.00, .50);
+            CheckingAccount c = (CheckingAccount)checking.ReadAccount();
+            s.Deposit(135.22);
+            s.PostInterest();
+            s.Withdraw(50);
+            Console.WriteLine
+            ("The balance of SavingsAccount s is {0:C}",
+                s.GetBalance());
+            c.Deposit(1000.00);
+            c.ProcessCheck(200.00);
+            c.Withdraw(100.00);
+            Console.WriteLine
+            ("The balance of CheckingAccount c is {0:C}",
+                c.GetBalance());
 
         }
 
