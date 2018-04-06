@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace HW8
 {
@@ -51,7 +52,7 @@ namespace HW8
 
         public static void DebugTest()
         {
-
+            Application.Run(new Ex10_8());
         }
 
         public static void Ex10_9Test()
