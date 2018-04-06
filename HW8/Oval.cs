@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
-using System.Windows.Forms;
 
 namespace HW8
 {
@@ -13,15 +12,17 @@ namespace HW8
         int xdiam;
         int ydiam;
 
-        public Oval(Point p, int ma, int mi)
+        public Oval(Point p, int ma, int mi) : base(p)
         {
             xdiam = ma;
             ydiam = mi;
         }
         public override void Draw(Graphics g)
         {
-            g.FillEllipse(Brushes.Red, location.X - 2 * xdiam,
-                 location.Y - 2 * ydiam, xdiam, ydiam);
+            // x and y radii are the diameter values / 2
+            // upper-left corner of the bounding rectangle = center point minus radii
+            g.FillEllipse(Brushes.Red, location.X - (xdiam / 2),
+                 location.Y - (ydiam / 2), xdiam, ydiam);
         }
     }
 
