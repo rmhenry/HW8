@@ -23,11 +23,18 @@ public class BankAccount {
     balance += amount;
   }
 
-  public virtual void Withdraw(double amount) {
+  public virtual double Withdraw(double amount) {
     if (balance >= amount)
-      balance -= amount;
+        {
+            balance -= amount;
+            return balance;
+        }      
     else
-      Console.WriteLine("Insufficient funds");
+        {
+            Console.WriteLine("Insufficient funds");
+            return -1;
+        }
+      
   } 
 
   public double GetBalance() {                                                         

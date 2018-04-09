@@ -31,7 +31,7 @@ namespace HW8
 
         public override double Withdraw(double amount)
         {
-            ProcessCheck(amount);
+            return ProcessCheck(amount);
         }
     }
 }
