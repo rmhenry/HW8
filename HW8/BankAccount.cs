@@ -41,9 +41,10 @@ public class BankAccount {
     return balance;
   }
 
-  public void ReadAccount()
+  public virtual BankAccount ReadAccount()
     {
-
+        BankAccount newInstance = new BankAccount();
+        return newInstance;
     } 
 }
 

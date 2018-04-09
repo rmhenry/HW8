@@ -21,5 +21,11 @@ namespace HW8
             double interest = interestRate / 100 * balance;
             Deposit(interest);
         }
+
+        public override BankAccount ReadAccount()
+        {
+            BankAccount newInstance = new BankAccount();
+            return newInstance;
+        }
     }
 }
