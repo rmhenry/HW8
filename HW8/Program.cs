@@ -57,18 +57,6 @@ namespace HW8
 
         public static void Ex10_9Test()
         {
-            //BankAccount newAccount = new BankAccount(100.00);
-            //BankAccount copiedAccount = (BankAccount)newAccount.ReadAccount();
-            //Console.WriteLine("The balance of copiedAccount is {0:C}",
-            //    copiedAccount.GetBalance());
-
-            //SavingsAccount savings = new SavingsAccount(100.00, 3.5);
-            //SavingsAccount s = (SavingsAccount)savings.ReadAccount();
-            //Console.WriteLine("The balance of s is {0:C}", s.GetBalance());
-            //Console.WriteLine("The interest rate of s is {0:N}", s.GetInterestRate());
-            //Console.ReadLine();
-
-
             SavingsAccount savings = new SavingsAccount(100.00, 3.5);
             SavingsAccount s = (SavingsAccount)savings.ReadAccount();
             CheckingAccount checking = new CheckingAccount(1000.00, .50);
@@ -90,7 +78,15 @@ namespace HW8
 
         public static void Ex10_13Test()
         {
+            Console.Clear();
 
+            Restaurant fast = new FastFood();
+            fast.EatOut();
+            //Restaurant coffee = new CoffeeShop();
+            //coffee.EatOut();
+            //Restaurant fancy = new FancyRestaurant();
+            //fancy.EatOut();
+            Console.ReadLine();
         }
 
         public static void Ex10_17Test()

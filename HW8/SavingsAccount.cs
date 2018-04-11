@@ -27,10 +27,5 @@ namespace HW8
             BankAccount newInstance = new SavingsAccount(this.GetBalance(), this.interestRate);
             return newInstance;
         }
-
-        public double GetInterestRate()
-        {
-            return interestRate;
-        }
     }
 }
