@@ -33,5 +33,11 @@ namespace HW8
         {
             return ProcessCheck(amount);
         }
+
+        public override BankAccount ReadAccount()
+        {
+            BankAccount newInstance = new CheckingAccount(this.GetBalance(), this.charge);
+            return newInstance;
+        }
     }
 }

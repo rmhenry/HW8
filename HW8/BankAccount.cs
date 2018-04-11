@@ -44,6 +44,7 @@ public class BankAccount {
   public virtual BankAccount ReadAccount()
     {
         BankAccount newInstance = new BankAccount();
+        newInstance.balance = this.balance;
         return newInstance;
     } 
 }

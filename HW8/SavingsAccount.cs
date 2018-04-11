@@ -24,8 +24,13 @@ namespace HW8
 
         public override BankAccount ReadAccount()
         {
-            BankAccount newInstance = new BankAccount();
+            BankAccount newInstance = new SavingsAccount(this.GetBalance(), this.interestRate);
             return newInstance;
+        }
+
+        public double GetInterestRate()
+        {
+            return interestRate;
         }
     }
 }
