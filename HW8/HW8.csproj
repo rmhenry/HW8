@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="BankAccount.cs" />
     <Compile Include="CheckingAccount.cs" />
+    <Compile Include="CoffeeShop.cs" />
     <Compile Include="Ex10_8.cs">
       <SubType>Form</SubType>
     </Compile>

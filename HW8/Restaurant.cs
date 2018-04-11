@@ -14,13 +14,25 @@ namespace HW8
         public abstract void PayBill();
         public abstract void ExtraDetail();
 
+        public void DisplayHeading(string heading)
+        {
+            Console.WriteLine(heading);
+        }
+
+        public void BlankLine()
+        {
+            Console.WriteLine();
+        }
+
         public virtual void EatOut()
         {
+            DisplayHeading("");
             GetMenu();
             OrderFood();
             ExtraDetail();
             GetBill();
             PayBill();
+            BlankLine();
         }
     }
 }
