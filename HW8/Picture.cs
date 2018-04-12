@@ -9,17 +9,33 @@ namespace HW8
 {
     public class Picture : Shape
     {
-        Shape[] shapesArray = new Shape[] { };
+        List<Shape> shapesList = new List<Shape>();
+        //Shape[] shapesArray = new Shape[] { };
+        int width;
+        int height;
 
 
-        public Picture(Point p, int xVal, int yVal) : base(p)
+        public Picture(Point p, int _width, int _height) : base(p)
         {
-
+            width = _width;
+            height = _height;
         }
 
         public override void Draw(Graphics g)
         {
-            throw new NotImplementedException();
+            g.DrawRectangle(Pens.Blue, location.X, location.Y, width, height);
+
+            foreach (Shape shape in shapesList)
+            {
+                Draw(g);
+            }
+            
+            //for (int i = 0; i < shapesArray.Length; i++)
+            //{
+            //    shapesArray[i].Move(location.X, location.Y);
+            //    shapesArray[i].Draw(g);
+            //    shapesArray[i].Move(-location.X, -location.Y);
+            //}
         }
 
         public override void Move(int xamount, int yamount)
@@ -36,8 +52,23 @@ namespace HW8
         // Adds the shape parameter to the next empty spot in the array.
         // Thanks to Joshua Coffman's support forum post for this solution.
         {
-            int emptySpot = Array.IndexOf(shapesArray, null);
-            shapesArray[emptySpot] = shape;
+            shapesList.Add(shape);
+            
+            //int newSize = shapesArray.Length + 1;
+            //Array.Resize(ref shapesArray, newSize);
+            //shapesArray[newSize - 1] = shape;
         }
+
+        public void Add(Picture picture)
+        // Adds the shape parameter to the next empty spot in the array.
+        // Thanks to Joshua Coffman's support forum post for this solution.
+        {
+            shapesList.Add(picture);
+
+            //int newSize = shapesArray.Length + 1;
+            //Array.Resize(ref shapesArray, newSize);
+            //shapesArray[newSize - 1] = shape;
+        }
+
     }
 }
