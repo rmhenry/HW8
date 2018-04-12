@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -96,7 +97,7 @@ namespace HW8
 
         public static void Ex10_17Test()
         {
-
+            Application.Run(new Ex10_17());
         }
 
         public static void ReturnToMainMenu()
