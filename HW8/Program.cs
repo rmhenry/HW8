@@ -82,8 +82,8 @@ namespace HW8
 
             Restaurant fast = new FastFood();
             fast.EatOut();
-            //Restaurant coffee = new CoffeeShop();
-            //coffee.EatOut();
+            Restaurant coffee = new CoffeeShop();
+            coffee.EatOut();
             //Restaurant fancy = new FancyRestaurant();
             //fancy.EatOut();
             Console.ReadLine();
