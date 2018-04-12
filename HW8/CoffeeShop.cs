@@ -10,22 +10,25 @@ namespace HW8
     {
         public override void ExtraDetail()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("The barista asks whether you would prefer whole, skim, soy, almond, cashew, or hemp milk.");
+            Console.WriteLine("Ever the traditionalist, you select good old whole milk; however, you assume the barista is judging your decision.");
         }
 
         public override void GetBill()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("No one has brought your check yet in the fifteen minutes since you finished your beverage.");
+            Console.WriteLine("");
         }
 
         public override void GetMenu()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Approach the counter and examine the menu board on the rear wall.");
         }
 
         public override void OrderFood()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("The regulars have no patience for uncertainty in line.");
+            Console.WriteLine("You panic and order a cappuccino, which is the only beverage on the menu with which you are familiar.");
         }
 
         public override void PayBill()
