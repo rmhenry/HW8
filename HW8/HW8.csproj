@@ -59,6 +59,7 @@
     <Compile Include="Ex10_8.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FancyRestaurant.cs" />
     <Compile Include="FastFood.cs" />
     <Compile Include="Name.cs" />
     <Compile Include="Oval.cs" />

@@ -53,10 +53,13 @@ namespace HW8
         public static void DebugTest()
         {
             Application.Run(new Ex10_8());
+            MainMenu();
         }
 
         public static void Ex10_9Test()
         {
+            Console.Clear();
+
             SavingsAccount savings = new SavingsAccount(100.00, 3.5);
             SavingsAccount s = (SavingsAccount)savings.ReadAccount();
             CheckingAccount checking = new CheckingAccount(1000.00, .50);
@@ -73,7 +76,8 @@ namespace HW8
             Console.WriteLine
             ("The balance of CheckingAccount c is {0:C}",
                 c.GetBalance());
-            Console.ReadLine();
+
+            ReturnToMainMenu();
         }
 
         public static void Ex10_13Test()
@@ -84,14 +88,23 @@ namespace HW8
             fast.EatOut();
             Restaurant coffee = new CoffeeShop();
             coffee.EatOut();
-            //Restaurant fancy = new FancyRestaurant();
-            //fancy.EatOut();
-            Console.ReadLine();
+            Restaurant fancy = new FancyRestaurant();
+            fancy.EatOut();
+
+            ReturnToMainMenu();
         }
 
         public static void Ex10_17Test()
         {
 
+        }
+
+        public static void ReturnToMainMenu()
+        {
+            Console.WriteLine();
+            Console.WriteLine("Press Enter to return to the Main Menu.");
+            Console.ReadLine();
+            MainMenu();
         }
     }
 }
