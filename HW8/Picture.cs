@@ -4,13 +4,13 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace HW8
 {
     public class Picture : Shape
     {
-        List<Shape> shapesList = new List<Shape>();
-        //Shape[] shapesArray = new Shape[] { };
+        Shape[] shapesArray = new Shape[0];
         int width;
         int height;
 
@@ -25,17 +25,12 @@ namespace HW8
         {
             g.DrawRectangle(Pens.Blue, location.X, location.Y, width, height);
 
-            foreach (Shape shape in shapesList)
+            for (int i = 0; i < shapesArray.Length; i++)
             {
-                Draw(g);
+                shapesArray[i].Move(location.X, location.Y);
+                shapesArray[i].Draw(g);
+                shapesArray[i].Move(-location.X, -location.Y);
             }
-            
-            //for (int i = 0; i < shapesArray.Length; i++)
-            //{
-            //    shapesArray[i].Move(location.X, location.Y);
-            //    shapesArray[i].Draw(g);
-            //    shapesArray[i].Move(-location.X, -location.Y);
-            //}
         }
 
         public override void Move(int xamount, int yamount)
@@ -48,26 +43,21 @@ namespace HW8
             return base.ToString();
         }
 
-        public void Add(Shape shape)
+        public void Add(Object currentShape)
         // Adds the shape parameter to the next empty spot in the array.
         // Thanks to Joshua Coffman's support forum post for this solution.
         {
-            shapesList.Add(shape);
-            
-            //int newSize = shapesArray.Length + 1;
-            //Array.Resize(ref shapesArray, newSize);
-            //shapesArray[newSize - 1] = shape;
+            int newSize = shapesArray.Length + 1;
+            Array.Resize(ref shapesArray, newSize);
+            shapesArray[newSize - 1] = (Shape)currentShape;
         }
 
-        public void Add(Picture picture)
-        // Adds the shape parameter to the next empty spot in the array.
-        // Thanks to Joshua Coffman's support forum post for this solution.
+        public void DisplayArrayContents()
         {
-            shapesList.Add(picture);
-
-            //int newSize = shapesArray.Length + 1;
-            //Array.Resize(ref shapesArray, newSize);
-            //shapesArray[newSize - 1] = shape;
+            for (int i = 0; i < shapesArray.Length; i++)
+            {
+                Console.WriteLine(shapesArray[i]);
+            }
         }
 
     }

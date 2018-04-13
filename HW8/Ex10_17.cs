@@ -22,6 +22,7 @@ namespace HW8
         public Ex10_17()
         {
             Size = new Size(700, 620);
+
             p1.Add(s0);
             p1.Add(s1);
             p2.Add(p1);
@@ -29,8 +30,11 @@ namespace HW8
             p2.Move(20, 50);
             p3.Add(t0);
             p3.Add(t1);
-            Console.WriteLine(p2);
 
+            //Console.WriteLine(p2);
+
+            p1.DisplayArrayContents();
         }
+
     }
 }
