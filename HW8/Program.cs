@@ -98,6 +98,7 @@ namespace HW8
         public static void Ex10_17Test()
         {
             Application.Run(new Ex10_17());
+            MainMenu();
         }
 
         public static void ReturnToMainMenu()

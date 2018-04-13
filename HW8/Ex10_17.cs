@@ -31,13 +31,17 @@ namespace HW8
             p3.Add(t0);
             p3.Add(t1);
 
-            Console.WriteLine($"p2 WriteLine = {p2}");
-            Console.WriteLine();
+            Console.Clear();
 
+            Console.WriteLine(p2);
+            Console.WriteLine(p1);
             //p1.DisplayArrayContents();
-            Console.WriteLine("p2 DisplayArrayContents =");
+            //Console.WriteLine();
+            //Console.WriteLine("p2 DisplayArrayContents =");
             p2.DisplayArrayContents();
+            //Console.WriteLine();
             //p3.DisplayArrayContents();
+
         }
 
         protected override void OnPaint(PaintEventArgs e)
