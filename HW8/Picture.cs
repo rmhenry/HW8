@@ -10,7 +10,7 @@ namespace HW8
 {
     public class Picture : Shape
     {
-        Shape[] shapesArray = new Shape[0];
+        Object[] shapesAndPictures = new Object[0];
         int width;
         int height;
 
@@ -25,11 +25,13 @@ namespace HW8
         {
             g.DrawRectangle(Pens.Blue, location.X, location.Y, width, height);
 
-            for (int i = 0; i < shapesArray.Length; i++)
+            for (int i = 0; i < shapesAndPictures.Length; i++)
             {
-                shapesArray[i].Move(location.X, location.Y);
-                shapesArray[i].Draw(g);
-                shapesArray[i].Move(-location.X, -location.Y);
+                Shape objectToShape = (Shape)shapesAndPictures[i];
+
+                objectToShape.Move(location.X, location.Y);
+                objectToShape.Draw(g);
+                objectToShape.Move(-location.X, -location.Y);
             }
         }
 
@@ -40,23 +42,23 @@ namespace HW8
 
         public override string ToString()
         {
-            return base.ToString();
+            return "Picture at center " + base.ToString();
         }
 
-        public void Add(Object currentShape)
-        // Adds the shape parameter to the next empty spot in the array.
+        public void Add(Object currentShapeOrPicture)
+        // Resizes the array and adds a new object at the end.
         // Thanks to Joshua Coffman's support forum post for this solution.
         {
-            int newSize = shapesArray.Length + 1;
-            Array.Resize(ref shapesArray, newSize);
-            shapesArray[newSize - 1] = (Shape)currentShape;
+            int newSize = shapesAndPictures.Length + 1;
+            Array.Resize(ref shapesAndPictures, newSize);
+            shapesAndPictures[newSize - 1] = currentShapeOrPicture;
         }
 
         public void DisplayArrayContents()
         {
-            for (int i = 0; i < shapesArray.Length; i++)
+            for (int i = 0; i < shapesAndPictures.Length; i++)
             {
-                Console.WriteLine(shapesArray[i]);
+                Console.WriteLine(shapesAndPictures[i]);
             }
         }
 
