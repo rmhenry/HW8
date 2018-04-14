@@ -42,7 +42,13 @@ namespace HW8
 
         public override string ToString()
         {
-            return "Picture at center " + base.ToString();
+            string arrayElements = "";
+            foreach (Object element in shapesAndPictures)
+            {
+                arrayElements += "\n" + element;
+            }
+
+            return "Picture at center " + base.ToString() + arrayElements;
         }
 
         public void Add(Object currentShapeOrPicture)

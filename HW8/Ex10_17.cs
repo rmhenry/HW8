@@ -34,11 +34,11 @@ namespace HW8
             Console.Clear();
 
             Console.WriteLine(p2);
-            Console.WriteLine(p1);
+            //Console.WriteLine(p1);
             //p1.DisplayArrayContents();
             //Console.WriteLine();
             //Console.WriteLine("p2 DisplayArrayContents =");
-            p2.DisplayArrayContents();
+            //p2.DisplayArrayContents();
             //Console.WriteLine();
             //p3.DisplayArrayContents();
 
