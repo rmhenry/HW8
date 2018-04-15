@@ -34,6 +34,8 @@ namespace HW8
             return ProcessCheck(amount);
         }
 
+        // The override sets a value for a CheckingAccount
+        // object's charge field
         public override BankAccount ReadAccount()
         {
             BankAccount newInstance = new CheckingAccount(this.GetBalance(), this.charge);

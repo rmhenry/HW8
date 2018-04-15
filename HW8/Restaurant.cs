@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace HW8
 {
+    // Part of Chapter 10 Exercise 13
+    // This class provides base methods
+    // common to various types of restaurants
     public abstract class Restaurant
     {
         public abstract void GetMenu();

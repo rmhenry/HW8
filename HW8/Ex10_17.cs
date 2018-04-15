@@ -8,6 +8,7 @@ using System.Windows.Forms;
 
 namespace HW8
 {
+    // Tests the functionality of the Picture class
     public class Ex10_17 : Form
     {
         Shape s0 = new Line(10, 10, 20, 30);
@@ -32,16 +33,7 @@ namespace HW8
             p3.Add(t1);
 
             Console.Clear();
-
             Console.WriteLine(p2);
-            //Console.WriteLine(p1);
-            //p1.DisplayArrayContents();
-            //Console.WriteLine();
-            //Console.WriteLine("p2 DisplayArrayContents =");
-            //p2.DisplayArrayContents();
-            //Console.WriteLine();
-            //p3.DisplayArrayContents();
-
         }
 
         protected override void OnPaint(PaintEventArgs e)

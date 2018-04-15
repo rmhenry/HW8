@@ -22,6 +22,8 @@ namespace HW8
             Deposit(interest);
         }
 
+        // The override sets a value for a SavingsAccount
+        // object's interest field
         public override BankAccount ReadAccount()
         {
             BankAccount newInstance = new SavingsAccount(this.GetBalance(), this.interestRate);

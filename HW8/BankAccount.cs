@@ -8,6 +8,10 @@
  */
 
 using System;
+
+
+// ReadAccount method added per Chapter 10 Exercise 9 instructions
+
 public class BankAccount {
   private double balance;                                                                 
 
@@ -41,7 +45,9 @@ public class BankAccount {
     return balance;
   }
 
-  public virtual BankAccount ReadAccount()
+    // Creates a new BankAccount instance using the values
+    // assigned to an existing BankAccount object's fields
+    public virtual BankAccount ReadAccount()
     {
         BankAccount newInstance = new BankAccount();
         newInstance.balance = this.balance;

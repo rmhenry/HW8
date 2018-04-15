@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace HW8
 {
+    // Part of Chapter 10 Exercise 13
+    // Generates console output that describes the experience
+    // of ordering food from a coffee shop
     public class CoffeeShop : Restaurant
     {
         public override void ExtraDetail()

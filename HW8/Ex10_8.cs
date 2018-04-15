@@ -8,6 +8,8 @@ using System.Windows.Forms;
 
 namespace HW8
 {
+    // This class tests the corrected code for 
+    // Chapter 10 debugging exercise 8.
     public class Ex10_8 : Form
     {
         Shape s;

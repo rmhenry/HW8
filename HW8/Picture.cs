@@ -8,6 +8,8 @@ using System.Windows.Forms;
 
 namespace HW8
 {
+    // This class fulfills the instructions for Chapter 10 Exercise 17
+    // A Picture instance is an array of Shape objects and/or other Picture objects
     public class Picture : Shape
     {
         Object[] shapesAndPictures = new Object[0];
@@ -21,6 +23,8 @@ namespace HW8
             height = _height;
         }
 
+        // This is an implementation of the Draw method that James Bateman
+        // shared in a support forum post.
         public override void Draw(Graphics g)
         {
             g.DrawRectangle(Pens.Blue, location.X, location.Y, width, height);
@@ -40,32 +44,34 @@ namespace HW8
             base.Move(xamount, yamount);
         }
 
+        // Displays a text string listing the picture coordinates
+        // and each element in the object's array
         public override string ToString()
+        
         {
-            string arrayElements = "";
-            foreach (Object element in shapesAndPictures)
-            {
-                arrayElements += "\n" + element;
-            }
-
+            string arrayElements = ArrayElementsToString();
             return "Picture at center " + base.ToString() + arrayElements;
         }
 
-        public void Add(Object currentShapeOrPicture)
         // Resizes the array and adds a new object at the end.
         // Thanks to Joshua Coffman's support forum post for this solution.
+        public void Add(Object currentShapeOrPicture)
         {
             int newSize = shapesAndPictures.Length + 1;
             Array.Resize(ref shapesAndPictures, newSize);
             shapesAndPictures[newSize - 1] = currentShapeOrPicture;
         }
 
-        public void DisplayArrayContents()
+        public string ArrayElementsToString()
         {
-            for (int i = 0; i < shapesAndPictures.Length; i++)
+            string arrayElements = "";
+
+            foreach (Object element in shapesAndPictures)
             {
-                Console.WriteLine(shapesAndPictures[i]);
+                arrayElements += "\n" + element;
             }
+
+            return arrayElements;
         }
 
     }
